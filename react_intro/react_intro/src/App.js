@@ -1,25 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import MyButton from './mybutton'; 
+import Profile from './ImageEx';
+
+
 
 function App() {
+
+  let isLoggedIn;
+  let content;
+  isLoggedIn = false;
+
+  if (isLoggedIn) {
+    content = <MyButton />;
+  } else {
+    content = <Profile />;
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
+      <h1> React Intro </h1>
+      
+        {content}
+          
+        
       </header>
     </div>
   );
 }
+
+
 
 export default App;
