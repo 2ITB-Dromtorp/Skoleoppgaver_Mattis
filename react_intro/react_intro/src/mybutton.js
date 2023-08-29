@@ -1,8 +1,8 @@
 import './App.css';
 
 function HelloWorld() {
-  console.log('Hello World!');
-  alert('Hello World!');
+  console.log('Welcome back!');
+  alert('Welcome back!');
 }
 
 export default function MyButton() {
