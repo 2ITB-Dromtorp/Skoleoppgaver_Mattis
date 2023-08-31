@@ -1,0 +1,23 @@
+body {
+  background-color: #fff;
+}
+
+
+.Oppgave {
+  border: solid rgb(160, 160, 188) 1px;
+  width: 50%;
+  margin: auto;
+}
+
+
+
+.Titlebar {
+  border: solid black 1px;
+  background-color: rgb(153, 51, 51);
+  color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    font-size: 1.5em;
+}
