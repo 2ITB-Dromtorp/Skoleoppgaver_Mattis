@@ -1,53 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
 
-function Programmering() {
-  return (
-<div>
-    <div class="Titlebar">Grunneleggende Programmering</div>
-    <Oppgave1 />
-    <Oppgave2 />
-    <Oppgave3 />
-    <Oppgave4 />
-    
 
-</div>
-  )
+
+function ConsoleLog() {
+  const data1 = document.getElementById("data1")
+  const data2 = document.getElementById("data2")
+  const data3 = document.getElementById("data3")
+  const data4 = document.getElementById("data4")
+  console.log(data1);
+  console.log(data2);
+  console.log(data3);
+  console.log(data4);
 }
 
 function Oppgave1() {
   return (
     <div class="Oppgave">
-      <p>Oppgave 1 </p>
-      <p> A) Hva skriver du i javascript dersom du vil gi variabelen test verdien 8?
-    Hvilken datatype er dette? 
-     <br></br>Svar: let=8, dette er altså en datatype "number". </p>
-    <p> B) Hva skriver du dersom du vil gi variabelen test verdien "testverdi"?
-Hvilken datatype er dette?<br></br>
-Svar: let test = "testverdi". Datatypen er en string! </p>
-    <p> C) Hva skriver du dersom du vil regne ut 2 * 3 og sette resultatet inn i
-variabelen produkt? <br></br>
-Svar: let produkt = 2 * 3;
- </p>
-    <p> D) Hva skriver du dersom du vil regne ut verdien av brøken 2/3 og sette
-resultatet inn i variabelen broek?  <br></br>Svar: let broek = 2 / 3;
-</p>
-    <p> E) </p>
+    <p>Oppgave 1 </p>
+    <p id="data1"> A) let=8, dette er altså en datatype "number". </p>
+    <p id="data2"> B)  let test = "testverdi". Datatypen er en string! </p>
+    <p id="data3"> C)  let produkt = 2 * 3;</p>
+    <p id="data4"> D)  let broek = 2 / 3;</p>
+    <p> E) Svaret er i consolelog</p>
     
-        </div>
+    </div>
 
   )
 
   
 }
 
-function Oppgave2() {
+function Oppgave2({lengde, bredde}) {
+  const rektangel = lengde * bredde;
+  const trekant = lengde * bredde / 2;
   return (
     <div class="Oppgave">
       <p>Oppgave 2 </p>
-    <p> B) </p>
+    <p> A) Areal til rektangel er {rektangel}m2  </p>
+    <p> B) Areal til trekant er {trekant}m2</p>
     <p> C) </p>
-    <p> D) </p>
     </div>
   )
 }
@@ -75,6 +67,21 @@ function Oppgave4() {
 
   )
 
+}
+
+function Programmering() {
+  return (
+<div>
+    <div class="Titlebar">Grunneleggende Programmering</div>
+    <Oppgave1 />
+    <Oppgave2 lengde={8} bredde={8} />
+    <Oppgave3 />
+    <Oppgave4 />
+    <ConsoleLog />
+    
+
+</div>
+  )
 }
 
 export default Programmering;
