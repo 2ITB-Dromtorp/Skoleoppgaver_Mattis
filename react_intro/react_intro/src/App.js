@@ -2,6 +2,7 @@ import './App.css';
 import MyButton from './mybutton'; 
 import Profile from './ImageEx';
 import {useState} from 'react'; 
+import DigitalClock from './DigitalClock';
 
 function Uselist() { 
       
