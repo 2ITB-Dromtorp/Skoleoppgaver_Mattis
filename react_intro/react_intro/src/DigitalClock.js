@@ -2,25 +2,22 @@ import { useState } from "react";
 
 export default function DigitalClock() {
 
-let clock = new Date();
-let hh = clock.getHours();
-let mm = clock.getMinutes();
-let ss = clock.getSeconds();
+    const [currentTime, setTime] = useState(new Date)
 
-const [currentTime, newTime] = useState( new Date)
+    const int = setInterval(() => {
+        setTime(new Date)
+    }, 1000);
 
-console.log(hh, mm, ss);
+    return (
+        <div className="App">
+            <header className="App-header">
 
-return (
-<div className="App">
-    <header className="App-header">
+                <h1> {currentTime.getHours()}:{currentTime.getMinutes()}:{currentTime.getSeconds()} </h1>
 
-    <h1> {hh}:{mm}:{ss} </h1>
+            </header>
 
-    </header>
+        </div>
 
-</div>
-
-)
+    )
 
 }
