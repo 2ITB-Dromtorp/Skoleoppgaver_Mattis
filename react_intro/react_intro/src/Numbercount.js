@@ -20,14 +20,14 @@ export default function Numbercount() {
     
     return (
     <div>
-        <button className="btnup"></button>
+        <button className="btnup" onClick={btnup}><img src="images/arrow_up.png" alt="buttondown" width="100px"/></button>
 
-        <p> </p>
+        <p>{count}</p>
 
-        <button className="btndown">  </button>
+        <button className="btndown" onClick={btndown}><img src="images/arrow_down.png" alt="buttonup" width="100px"/></button>
 
-        <img src={northdown} alt="buttondown"/>
-        <img src={northup} alt="buttonup"/>
+      
+        
 
     </div>
     );

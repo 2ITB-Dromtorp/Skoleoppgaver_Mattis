@@ -25,13 +25,13 @@ html {
 }
 
 .btnup {
-
-
+  background-color: transparent;
+  border: none;
 }
 
 .btndown {
-
-
+  background-color: transparent;
+  border: none;
 }
 
 .App-link {
