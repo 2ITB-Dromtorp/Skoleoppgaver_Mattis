@@ -22,7 +22,7 @@ function Oppgave1() {
     <p id="data2"> B)  let test = "testverdi". Datatypen er en string! </p>
     <p id="data3"> C)  let produkt = 2 * 3;</p>
     <p id="data4"> D)  let broek = 2 / 3;</p>
-    <p> E) Svaret er i consolelog</p>
+    <p> E) Svaret er i consolelog!</p>
     
     </div>
 
@@ -30,6 +30,7 @@ function Oppgave1() {
 
   
 }
+
 
 function Oppgave2({lengde, bredde}) {
   const rektangel = lengde * bredde;
@@ -42,6 +43,11 @@ function Oppgave2({lengde, bredde}) {
     <p> C) </p>
     </div>
   )
+}
+
+function arealKalkulator() {
+
+  
 }
 
 

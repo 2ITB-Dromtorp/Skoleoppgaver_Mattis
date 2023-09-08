@@ -1,9 +1,6 @@
 import { useState } from "react";
-import northup from './images/arrow_up.png'
+import northup from './images/Arrow_Top.png'
 import northdown from './images/arrow_down.png'
-
-
-
 
 export default function Numbercount() {
     
@@ -20,11 +17,11 @@ export default function Numbercount() {
     
     return (
     <div>
-        <button className="btnup" onClick={btnup}><img src="images/arrow_up.png" alt="buttondown" width="100px"/></button>
+        <button className="btnup" onClick={btnup}><img src={northup} alt="buttondown" width="100px"/></button>
 
         <p>{count}</p>
 
-        <button className="btndown" onClick={btndown}><img src="images/arrow_down.png" alt="buttonup" width="100px"/></button>
+        <button className="btndown" onClick={btndown}><img src={northdown} alt="buttonup" width="100px"/></button>
 
       
         
