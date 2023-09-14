@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Oppgave3 from './oppgave3'
 
 
 
@@ -45,23 +46,8 @@ function Oppgave2({lengde, bredde}) {
   )
 }
 
-function arealKalkulator() {
-
-  
-}
 
 
-function Oppgave3() {
-  return (
-    <div class="Oppgave">
-   <p>Oppgave 3 </p>
-    <p> A) </p>
-    <p> B) </p>
-    </div>
-
-  )
-
-}
 
 
 function Oppgave4() {
@@ -79,12 +65,8 @@ function Programmering() {
   return (
 <div>
     <div class="Titlebar">Grunneleggende Programmering</div>
-    <Oppgave1 />
-    <Oppgave2 lengde={8} bredde={8} />
     <Oppgave3 />
-    <Oppgave4 />
-    <ConsoleLog />
-    
+      
 
 </div>
   )
