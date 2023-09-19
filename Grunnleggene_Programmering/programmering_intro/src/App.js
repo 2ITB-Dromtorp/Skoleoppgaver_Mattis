@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Oppgave3 from './oppgave3'
+import GuessingGame from './Oppgave4';
 
 
 
@@ -50,23 +51,13 @@ function Oppgave2({lengde, bredde}) {
 
 
 
-function Oppgave4() {
-  return (
-    <div class="Oppgave">
-    <p>Oppgave 4 </p>
-    <p> A) </p>
-    </div>
-
-  )
-
-}
 
 function Programmering() {
   return (
 <div>
     <div class="Titlebar">Grunneleggende Programmering</div>
-    <Oppgave3 />
-      
+    {/* <Oppgave3 />*/}
+        <GuessingGame />
 
 </div>
   )
