@@ -12,7 +12,7 @@ function GuessingGame() {
 
   const handleGuess = () => {
     const guessNumber = parseInt(guess, 10);
-    setcount((a)=>a+1)
+    setcount(count + 1)
     if (isNaN(guessNumber)) {
       setMessage('Vennligst skriv inn et gyldig tall.');
     } else if (guessNumber === targetNumber) {
@@ -24,6 +24,13 @@ function GuessingGame() {
     }
   };
 
+  const handleKeypress = e => {
+    //it triggers by pressing the enter key
+  if (e.keyCode === 13) {
+    this.handleGuess;
+  }
+};
+
   return (
     <div>
       <h1>Gjettespillet</h1>
@@ -33,6 +40,7 @@ function GuessingGame() {
         type="number"
         value={guess}
         onChange={handleInputChange}
+        onKeyDown={this.handleKeypress}
       />
       <button onClick={handleGuess}>Gjett</button>
     </div>
