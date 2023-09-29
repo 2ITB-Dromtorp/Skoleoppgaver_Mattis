@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Oppgave3 from './oppgave3'
 import GuessingGame from './Oppgave4';
+import React from 'react';
+  import './App.css';
+  import handgame from './handgame';
 
 
 
@@ -48,7 +51,14 @@ function Oppgave2({lengde, bredde}) {
 }
 
 
-
+function oppgave5() {
+    return (
+      <div className="App">
+        <h1>Rock, Paper, Scissors</h1>
+            </div>
+    );
+  }
+  
 
 
 
@@ -57,7 +67,7 @@ function Programmering() {
 <div>
     <div class="Titlebar">Grunneleggende Programmering</div>
     {/* <Oppgave3 />*/}
-        <GuessingGame />
+        < handgame />
 
 </div>
   )
