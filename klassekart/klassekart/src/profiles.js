@@ -1,4 +1,4 @@
-let json = {
+const json = {
     "elever" : [
         {
             "navn" : "Andreas",
