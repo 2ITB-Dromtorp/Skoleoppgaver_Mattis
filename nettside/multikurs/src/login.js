@@ -4,10 +4,45 @@ import { UserContext } from "./context";
 import { useRefreshUserData } from "./custom_hooks";
 
 function UserForm({ isLogin }) {
+    const [userData, setUserData] = useContext(UserContext);
     const navigate = useNavigate();
     const [usernameInput, setUsernameInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
-    const refreshUserData = useRefreshUserData();
+
+    const database = [
+        {
+            username: "Mattis",
+            password: "m",
+            courses: [],
+        },
+        {
+            username: "user2",
+            password: "pass2",
+            courses: [],
+        },
+    ];
+
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const userData = database.find((user) => user.username === usernameInput);
+
+        if (userData) {
+            if (passwordInput !== userData.password) {
+                console.log('wrong password');
+            } else {
+                console.log('login');
+                setUserData(userData)
+                navigate('/');
+            }
+        } else {
+            console.log('wrong username');
+        }
+    };
+
+
     let title;
     let submitText;
     let wrongFormText;
@@ -30,30 +65,14 @@ function UserForm({ isLogin }) {
         apiName = 'signup';
     }
     return (
-        <form id="user_form" onSubmit={(e) => {
-            e.preventDefault();
-            fetch(`/api/${apiName}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    username: usernameInput,
-                    password: passwordInput,
-                }),
-            }).then((res) => {
-                if (res.status === 200) {
-                    refreshUserData();
-                    navigate('/');
-                }
-            });
-        }}>
-            <div className ='form'>
-                 <h2>
+        <form id="user_form" onSubmit={handleSubmit}>
+
+            <div className='form'>
+                <h2>
                     {title}
                 </h2>
                 <label htmlFor="username">
-                 Brukernavn:
+                    Brukernavn
                 </label>
                 <input type="text" id="username" value={usernameInput} onChange={(e) => setUsernameInput(e.target.value)} />
                 <label htmlFor="password">
@@ -62,7 +81,7 @@ function UserForm({ isLogin }) {
                 <input type="password" id="password" value={passwordInput} onChange={(e) => setPasswordInput(e.target.value)} />
                 <button className="logginn" type="submit">
                     {submitText}
-             </button>
+                </button>
             </div>
         </form>
     )

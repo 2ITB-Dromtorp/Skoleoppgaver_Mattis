@@ -11,20 +11,11 @@ import { UserContext } from './context';
 import { useRefreshUserData } from './custom_hooks';
 
 function App() {
-	const [isFirstRender, setIsFirstRender] = useState(true);
-	const [userData, setUserData] = useContext(UserContext);
-	const refreshUserData = useRefreshUserData();
-	useEffect(() => {
-		if (isFirstRender === true) {
-			setIsFirstRender(false);
-			refreshUserData();
-		}
-	}, [isFirstRender]);
 
 	return (
 		<Routes>
 			<Route path="/" element={<Layout />}>
-				<Route index element={<Home />} />
+				<Route path="/" element={<Home />} />
 				<Route path="/course/:courseId" element={<Info />} />
 				<Route path="/loggin" element={<Login isLogin={true} />} />
 				<Route path="/registrerdeg" element={<Login isLogin={false} />} />

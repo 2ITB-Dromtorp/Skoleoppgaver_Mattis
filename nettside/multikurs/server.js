@@ -40,8 +40,6 @@ function genAuthToken() {
 
 
 
-
-
 function authRequest(req) {
     return new Promise((resolve, reject) => {
         const authCookie = req.cookies.auth;
@@ -114,7 +112,7 @@ app.post("/api/signup", (req, res) => {
         res.status(400).send("Password empty");
         return;
     }
-    bcrypt.hash(password, 15, (err, hash) => {
+    bcrypt.hash(password, 10, (err, hash) => {
         if (err) {
             console.error(err);
             res.status(500).send(err);
@@ -163,6 +161,10 @@ app.post("/api/login", (req, res) => {
             console.error(err);
             res.status(500).send(err);
         } else {
+            if (users.length === 0) {
+                res.status(403).send("user not found");
+                return;
+            }
             const user = users[0];
             bcrypt.compare(password, user.password).then((success) => {
                 if (success === true) {
@@ -222,6 +224,7 @@ app.get("/api/userdata", (req, res) => {
         if (user) {
             res.status(200).send({
                 logged_in: true,
+                username: user.username,
                 courses: user.courses,
             });
         } else {

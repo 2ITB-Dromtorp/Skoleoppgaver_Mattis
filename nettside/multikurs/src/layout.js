@@ -9,20 +9,9 @@ function Nav() {
             <Link id="home_link" to="/">
                 <img id="home_link_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Viken_v%C3%A5pen.svg/640px-Viken_v%C3%A5pen.svg.png"/>
             </Link>
-            {userData.logged_in ? (
+            {userData !== undefined ? (
                 <button className="fancy_button" onClick={(e) => {
-                    fetch('/api/logout', {
-                        method: 'POST',
-                    }).then((res) => {
-                        if (res.status === 200) {
-                            console.log("kult")
-                            setUserData({
-                                logged_in: false,
-                            });
-                        } else {
-                            console.log("Ikke kult")
-                        }
-                    });
+                    setUserData();
                 }}>
                     Logg ut
                 </button>
