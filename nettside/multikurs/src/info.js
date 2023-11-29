@@ -24,7 +24,7 @@ export default function Info () {
             </>
          );
          break;
-      case "kroppsoving":
+      case "kroppsøving":
          courseContent = (
             <>
                <h2>Kroppsøving</h2>

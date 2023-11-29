@@ -75,7 +75,7 @@ function Home() {
                 <Square courseId="norsk" courseName="Norsk" courseDesc="Dette kurset dreier seg mest om norsk og vil gå grundig igjennom norsk faget, blant annet dikt analyser osv." courseImage='https://st4.depositphotos.com/16647696/24841/i/450/depositphotos_248417272-stock-photo-books-on-the-background-of.jpg' />
                 <Square courseId="heimkunnskap" courseName="Heimkunnskap" courseDesc="Dette kurset handler om Heimkunnskap og vil fortelle deg hvordan du kan bli bedre til å lage mat i hverdagen." courseImage='https://www.njff.no/mat/jegergryte/_/image/e3cda4dc-1536-4d05-a80c-77da069c0770:33973c5a07bccdbfbeaee7caa1fde6f32b8fb98c/block-1024-768/jegergryte.jpg/' />
                 <Square courseId="datakunnskap" courseName="Datakunnskap" courseDesc="Dette kurset handler om Grunneleggene Datakunnskap og vil fortelle deg hvordan du kan bli flinkere på data og lære de tryggeste metodene." courseImage='https://www.fotovideoweb.no/stage/wp-content/uploads/2015/10/autumn-desktop.jpg' />
-                <Square courseId="kroppsoving" courseName="Kroppsøving" courseDesc="Dette kurset handler om Kroppsøving og hvordan du kan bli bedre trent eller ha bedre kosthold osv." courseImage='https://www.hussle.com/blog/wp-content/uploads/2020/12/Gym-structure-1080x675.png' />
+                <Square courseId="kroppsøving" courseName="Kroppsøving" courseDesc="Dette kurset handler om Kroppsøving og hvordan du kan bli bedre trent eller ha bedre kosthold osv." courseImage='https://www.hussle.com/blog/wp-content/uploads/2020/12/Gym-structure-1080x675.png' />
             </div>
         </div>
     );
