@@ -1,0 +1,29 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  border: solid 3px black;
+  padding: 10px;
+}
+
+.nav_button {
+  font-size: 3em;
+  padding: 1em;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+}
+
+.nav_button:hover {
+  font-size: 3em;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.box {
+  height: 530px; 
+  border: 3px solid black;
+}
