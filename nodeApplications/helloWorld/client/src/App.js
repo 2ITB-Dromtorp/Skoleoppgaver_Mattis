@@ -9,9 +9,7 @@ import Update from "./pages/pages/update";
 import Delete from "./pages/pages/delete";
 
 function App() {
-
   return (
-    <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />} >
@@ -23,7 +21,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 
