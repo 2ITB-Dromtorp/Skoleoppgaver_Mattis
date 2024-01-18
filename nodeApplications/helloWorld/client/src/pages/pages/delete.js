@@ -1,9 +1,9 @@
+import { Table } from "../../table";
+
 export default function Delete() {
     return (
-        <>
-            <h1>
-                Delete
-            </h1>
-        </>
+        <div>
+            <Table headerText={'Update'} editType={'delete'} />
+        </div>
     );
 }
