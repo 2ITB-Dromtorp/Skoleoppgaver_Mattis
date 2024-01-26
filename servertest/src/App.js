@@ -2,6 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  function absolute() {
+    fetch("/get").then((res) => {
+      return res.json()
+    }).then((data) => {
+      console.log(data.message)
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => absolute()}>Fetch data absolutt</button>
       </header>
     </div>
   );

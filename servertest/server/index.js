@@ -9,7 +9,7 @@ app.use(express.static("build"))
 const port = process.env.PORT || 8080
 
 app.listen(port, () => {
-    app.get("/api/get", (req, res) => {
+    app.get("/get", (req, res) => {
         res.status(200).json({"message": "👌"})
     })
     app.get("*", (req, res) => {
