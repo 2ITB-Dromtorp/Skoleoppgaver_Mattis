@@ -88,3 +88,23 @@ body {
   transition: width 0.5s ease-out;
   border-radius: 10px;
 }
+
+
+
+.questions_results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.questions_result_question {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.questions_result {
+  display: flex;
+  flex-direction: column;
+}
